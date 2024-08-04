@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'soursesanspro';
+  src: url('../public/fonts/sourcesanspro-light-webfont.woff') format('woff');
+  font-weight: 300; /* Light */
+}
+@font-face {
+  font-family: 'soursesanspro';
+  src: url('../public/fonts/sourcesanspro-regular-webfont.woff') format('woff');
+  font-weight: 400; /* regular */
+}
+@font-face {
+  font-family: 'soursesanspro';
+  src: url('../public/fonts/sourcesanspro-bold-webfont.woff') format('woff');
+  font-weight: 700; /* Bold  */
+}
+@font-face {
+  font-family: 'soursesanspro';
+  src: url('../public/fonts/sourcesanspro-black-webfont.woff') format('woff');
+  font-weight: 900; /* Black  */
+}
