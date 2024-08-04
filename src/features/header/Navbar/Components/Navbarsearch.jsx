@@ -11,9 +11,9 @@ function Navbarsearch() {
       </div>
       <div
         tabIndex={0}
-        className="card dropdown-content card-compact right-0 top-10 z-[1] w-60 rounded bg-sky-50 p-2 text-primary-content shadow"
+        className="card dropdown-content card-compact right-0 top-10 z-[1] w-60 rounded bg-white p-1 text-primary-content shadow dark:bg-slate-900"
       >
-        <div className="card-body flex-row bg-sky-50">
+        <div className="card-body w-full flex-row bg-white !p-0 dark:bg-slate-900">
           <Searchinput />
         </div>
       </div>
