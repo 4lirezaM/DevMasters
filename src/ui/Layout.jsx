@@ -1,11 +1,13 @@
-import { Outlet } from "react-router";
-import Footer from "./../features/Footer/Footer";
-import Header from "./../features/Header/Header";
+import { Outlet } from 'react-router';
+import Footer from './../features/Footer/Footer';
+import Header from './../features/Header/Header';
 function Layout() {
   return (
     <>
       <Header />
-      <Outlet />
+      <main className="bg-white dark:bg-slate-800">
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import Button from '../../../../ui/Button';
+import { AppContext } from '../../../../context/AppContext';
 
 function DarkModeButton({ type }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggledarkMode } = useContext(AppContext);
 
   useEffect(() => {
     if (darkMode) {
@@ -13,12 +14,8 @@ function DarkModeButton({ type }) {
     }
   }, [darkMode]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
   return (
-    <Button handler={toggleDarkMode} type={type}>
+    <Button handler={toggledarkMode} type={type}>
       {!darkMode ? (
         <i className="fa-solid fa-moon"></i>
       ) : (

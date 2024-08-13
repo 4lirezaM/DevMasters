@@ -8,6 +8,8 @@ import CourseView from "./pages/CourseView/CourseView";
 import Articles from "./pages/Articles/Articles";
 import ArticleView from "./pages/ArticleView/ArticleView";
 import Layout from "./ui/Layout";
+import AppProvider from "./context/AppContext";
+import Loading from "./features/Loading/Loading";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/signup", element: <Register /> },
+      { path: "/loading", element: <Loading /> },
       { path: "/signin", element: <Login /> },
       { path: "/courses", element: <Courses /> },
       { path: "/course/:coursename", element: <CourseView /> },
@@ -29,7 +32,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
+  );
 }
 
 export default App;

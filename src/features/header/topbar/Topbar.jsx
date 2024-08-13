@@ -1,21 +1,19 @@
-/* eslint-disable no-unused-vars */
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { fetchTopbarLinks } from '../../../services/header api/header api.js';
-import { shuffleArray } from '../../../utils/helpers.js';
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { fetchTopbarLinks } from "../../../services/header api/header api.js";
+import { shuffleArray } from "../../../utils/helpers.js";
 
 // Usage:
 function Topbar() {
   let shuffledArray = [];
   const [topbarLinks, setTopbarLinks] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         const jsonData = await fetchTopbarLinks();
         setTopbarLinks(jsonData);
       } catch (error) {
-        console.log('topbar fetch error', error);
+        console.log("topbar fetch error", error);
       }
     };
 

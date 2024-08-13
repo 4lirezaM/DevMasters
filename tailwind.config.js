@@ -6,6 +6,9 @@ export default {
   darkMode: 'selector',
   theme: {
     extend: {
+      scale: {
+        102: '1.02',
+      },
       borderWidth: {
         1: '1px',
         3: '3px',
