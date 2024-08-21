@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useRef } from 'react';
-import Logo from './Logo';
-import DarkModeButton from './DarkModeButton';
-import Menu from './Menu';
-import Searchinput from './Searchinput';
-import styles from './Sidebar.module.css';
+import { useEffect, useRef } from "react";
+import Logo from "./Logo";
+import DarkModeButton from "./DarkModeButton";
+import Menu from "./Menu";
+import Searchinput from "./Searchinput";
+import styles from "./Sidebar.module.css";
 
 function Sidebar({ setIsSidebarOpen, isSidebarOpen }) {
   const SidebarRef = useRef(null);
@@ -20,16 +20,16 @@ function Sidebar({ setIsSidebarOpen, isSidebarOpen }) {
       }
     }
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [setIsSidebarOpen]);
 
   return (
     <div
       ref={SidebarRef}
-      className={`${styles.Sidebar} ${isSidebarOpen ? 'left-0' : '-left-full'} fixed bottom-0 top-0 z-50 w-60 overflow-auto overflow-x-hidden border-r-1 border-solid border-r-sky-50 bg-white p-2 transition-all duration-300 ease-in-out md:hidden dark:bg-slate-900`}
+      className={`${styles.Sidebar} ${isSidebarOpen ? "left-0" : "-left-full"} fixed bottom-0 top-0 z-50 w-60 overflow-auto overflow-x-hidden border-r-1 border-solid border-r-sky-50 bg-white p-2 transition-all duration-300 ease-in-out md:hidden dark:border-slate-950 dark:bg-slate-900`}
     >
       <div className="flex items-center justify-between border-b border-solid border-b-slate-200 pb-1.5 dark:border-b-slate-950">
         <Logo />

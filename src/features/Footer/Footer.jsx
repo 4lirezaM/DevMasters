@@ -1,5 +1,5 @@
-import FooterLink from './Components/FooterLink';
-import NewsLetter from './Components/NewsLetter';
+import FooterLink from "./Components/FooterLink";
+import NewsLetter from "./Components/NewsLetter";
 
 function Footer() {
   return (
@@ -79,6 +79,16 @@ function Footer() {
           </div>
           <NewsLetter />
         </section>
+      </div>
+      <div className="bg-sky-300 p-4 text-center text-xl text-black dark:bg-slate-950 dark:text-white">
+        <span className="text-2xl">©</span> Made By{" "}
+        <a
+          target="_blank"
+          className="hover:text-blue-700 dark:hover:text-sky-500"
+          href="https://github.com/4lirezaM"
+        >
+          4lirezaM <i className="fa-brands fa-xl fa-square-github"></i>
+        </a>
       </div>
     </footer>
   );

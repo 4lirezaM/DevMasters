@@ -38,6 +38,7 @@ function Topbar() {
       <div className="flex items-center justify-center pl-10">
         <a
           href="https://github.com/4lirezaM"
+          target="_blank"
           className="ml-1 flex items-center justify-center gap-1 hover:text-sky-600 dark:hover:text-sky-400"
         >
           <i className="fa-brands fa-xl fa-square-github"></i>
